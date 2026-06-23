@@ -22,8 +22,22 @@
 - `data/sample_preference_dpo.jsonl`：DPO 偏好数据样例。
 - `data/sample_prompts_rl.jsonl`：PPO/GRPO 可验证奖励样例。
 - `notebooks/shared/00_data_formats.ipynb`：数据格式说明。
+- `notebooks/shared/01_lora_adapter_merge.ipynb`：LoRA adapter 合并说明。
+- `notebooks/shared/02_gguf_export.ipynb`：GGUF 导出说明。
+- `notebooks/shared/03_awq_gptq_exl2_quantization.ipynb`：AWQ、GPTQ、EXL2 量化说明。
+- `notebooks/shared/04_common_errors.ipynb`：常见错误汇总。
 - `notebooks/qwen2_5_7b/01_model_overview.ipynb`：Qwen2.5-7B 模型介绍。
+- `notebooks/qwen2_5_7b/00_env_check.ipynb`：Qwen2.5-7B 环境检查。
+- `notebooks/qwen2_5_7b/02_training_all.ipynb`：Qwen2.5-7B 训练全流程。
+- `notebooks/qwen2_5_7b/03_quantization_all.ipynb`：Qwen2.5-7B 量化全流程。
+- `notebooks/qwen2_5_7b/04_deployment_all.ipynb`：Qwen2.5-7B 部署全流程。
+- `notebooks/qwen2_5_7b/05_unsloth_all.ipynb`：Qwen2.5-7B Unsloth 全流程。
 - `notebooks/gpt_oss_20b/01_model_overview.ipynb`：gpt-oss-20b 模型介绍。
+- `notebooks/gpt_oss_20b/00_env_check.ipynb`：gpt-oss-20b 环境检查。
+- `notebooks/gpt_oss_20b/02_training_all.ipynb`：gpt-oss-20b 训练全流程。
+- `notebooks/gpt_oss_20b/03_quantization_all.ipynb`：gpt-oss-20b 量化全流程。
+- `notebooks/gpt_oss_20b/04_deployment_all.ipynb`：gpt-oss-20b 部署全流程。
+- `notebooks/gpt_oss_20b/05_unsloth_all.ipynb`：gpt-oss-20b Unsloth 全流程。
 
 ## 基本原则
 
