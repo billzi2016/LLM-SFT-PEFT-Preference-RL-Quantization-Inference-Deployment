@@ -1,0 +1,33 @@
+# Qwen2.5-7B-Instruct 部署配置
+
+model_name: Qwen/Qwen2.5-7B-Instruct
+
+transformers:
+  torch_dtype: auto
+  device_map: auto
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9
+  do_sample: true
+
+vllm:
+  host: 0.0.0.0
+  port: 8000
+  dtype: auto
+  max_model_len: 8192
+  gpu_memory_utilization: 0.90
+  tensor_parallel_size: 1
+  served_model_name: qwen2.5-7b-instruct
+
+sglang:
+  host: 0.0.0.0
+  port: 30000
+  dtype: auto
+  context_length: 8192
+  tensor_parallel_size: 1
+
+ollama:
+  # Qwen 走 Ollama 时通常使用 GGUF 或 Ollama 模型库中的可用模型。
+  num_ctx: 8192
+  temperature: 0.7
+  top_p: 0.9

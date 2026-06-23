@@ -1,0 +1,3 @@
+{"prompt":[{"role":"user","content":"解释 QLoRA 的优点。"}],"chosen":[{"role":"assistant","content":"QLoRA 的主要优点是显存占用低。它用 4bit 加载基座模型，同时只训练 LoRA adapter，因此单卡也更容易微调 7B、14B 甚至更大的模型。"}],"rejected":[{"role":"assistant","content":"QLoRA 和普通全量训练差不多，只是名字不同。"}]}
+{"prompt":[{"role":"user","content":"什么情况下应该优先用 vLLM 部署模型？"}],"chosen":[{"role":"assistant","content":"当你需要把模型作为服务提供给多个调用方，并且关心吞吐、并发、流式输出和 OpenAI-compatible API 时，应该优先考虑 vLLM。"}],"rejected":[{"role":"assistant","content":"任何情况都必须用 vLLM，因为它总是最简单。"}]}
+{"prompt":[{"role":"user","content":"LoRA adapter 是否可以脱离基座模型单独部署？"}],"chosen":[{"role":"assistant","content":"通常不可以。LoRA adapter 只保存增量参数，推理时需要和对应的基座模型一起加载，或者先把 adapter 合并进基座模型再部署。"}],"rejected":[{"role":"assistant","content":"可以，adapter 本身就是完整模型，直接运行即可。"}]}

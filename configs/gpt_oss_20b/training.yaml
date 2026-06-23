@@ -1,0 +1,45 @@
+# gpt-oss-20b 训练配置
+
+model_name: openai/gpt-oss-20b
+dataset_path: data/sample_sft.jsonl
+output_dir: outputs/gpt_oss_20b
+
+# gpt-oss 支持长上下文，但训练时不要默认拉满；上下文越长显存越高。
+max_seq_length: 2048
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 0.0001
+num_train_epochs: 1
+warmup_ratio: 0.03
+logging_steps: 10
+save_steps: 100
+
+# gpt-oss 对精度更敏感，优先 bf16；fp16 需要谨慎验证。
+bf16: true
+fp16: false
+gradient_checkpointing: true
+
+# gpt-oss 必须使用 Harmony 兼容格式，不能直接套普通 ChatML。
+chat_format: harmony
+reasoning_effort: medium
+
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+qlora:
+  enabled: true
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_compute_dtype: bfloat16
+  bnb_4bit_use_double_quant: true

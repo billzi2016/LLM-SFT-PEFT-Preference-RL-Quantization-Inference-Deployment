@@ -1,0 +1,4 @@
+{"prompt":"计算 12 + 30，只输出一个阿拉伯数字。","answer":"42","reward_type":"exact_match"}
+{"prompt":"把下面内容转成 JSON，只包含 name 和 age 两个字段：张三，18岁。","answer":"{\"name\":\"张三\",\"age\":18}","reward_type":"json_schema"}
+{"prompt":"判断下面 Python 表达式的结果，只输出 True 或 False：len([1,2,3]) == 3","answer":"True","reward_type":"exact_match"}
+{"prompt":"写一个只包含小写字母的字符串，长度必须是 5。","answer":"regex:^[a-z]{5}$","reward_type":"regex_match"}
