@@ -1,4 +1,6 @@
-# LLM-SFT
+# LLM-SFT-PEFT-Preference-RL-Quantization-Inference-Deployment
+
+中文标题：大模型 SFT、PEFT、偏好优化、奖励优化、量化、推理与部署全链路
 
 这个仓库用于整理两套开源权重大模型的训练、量化和部署流程：
 

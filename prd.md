@@ -1,4 +1,6 @@
-# 大模型训练与部署内容规划
+# LLM-SFT-PEFT-Preference-RL-Quantization-Inference-Deployment
+
+中文标题：大模型 SFT、PEFT、偏好优化、奖励优化、量化、推理与部署全链路内容规划
 
 ## 1. 文档目标
 
